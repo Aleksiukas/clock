@@ -1,10 +1,10 @@
 "use strict"
 
-const DOMclock = document.querySelector('.clock');
+const DOMclockAmPm = document.querySelector('.clock');
 
-let HTML= '';
+let HTML4= '';
 
-for (let h=0; h<24; h++) {
+for (let h=0; h<12; h++) {
     let hours = h;
     if (hours <10) {
     hours = '0' + hours;
@@ -20,9 +20,14 @@ for (let h=0; h<24; h++) {
             let seconds = s;
             if (seconds <10) {
             seconds = '0' + seconds;
+            
+            if(hours==0){ 
+                hours=12;
+                }
+                else if(hours>12);
             }
-            HTML += `<div class="time">${hours}:${minutes}:${seconds}</div>`;
+            HTML4 += `<div class="time">${hours}:${minutes}:${seconds}</div>`;
         }
     } 
 }
-    DOMclock.innerHTML=HTML;    
+    DOMclockAmPm.innerHTML=HTML4;    
