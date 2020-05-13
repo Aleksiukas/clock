@@ -25,6 +25,7 @@ for (let h=0; h<12; h++) {
                 hours=12;
                 }
                 else if(hours>12);
+                
             }
             HTML += `<div class="time">${hours}:${minutes}:${seconds}</div>`;
         }
